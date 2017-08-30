@@ -1,0 +1,203 @@
+/* regular formatting below */
+
+      main{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+      }
+
+      body{
+        margin: 0;
+        background-image: url(../media/plank_background.jpg);
+      }
+
+      #featured_item{
+        width: 50%;
+        height: 370px;
+        float: left;
+        background-image: url(../media/love_bottles.jpg);
+        background-position: center bottom;
+        background-size: cover;
+        margin-bottom: 0;
+        border-radius: 5px 0 0 0;
+
+      }
+
+      #featured_info{
+        width: 50%;
+        height: 370px;
+        float: right;
+        background-color: rgba(148, 148, 148, 0.7);
+        margin-bottom: 0;
+        border-radius: 0 5px 0 0;
+      }
+
+      #featured_info p{
+        text-align: center;
+        margin-top: 10%;
+        color: #ffffff;
+        font-family: "Amatic SC";
+        font-size: 5.5em;
+        text-shadow: 2px 2px #010011;
+      }
+
+      #shop_now a{
+        text-decoration: none;
+        color: #ffffff;
+        opacity: 1.0;
+      }
+
+      #shop_now{
+        width: 6em;
+        border: 1px solid #010011;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgba(186, 1, 100, 0.8);
+        color: #ffffff;
+        text-align: center;
+        font-family: "Bree Serif";
+        margin-top: -10%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #shop_now a:visited{
+        color: #ffffff;
+      }
+
+      #shop_now:hover{
+        background-color: rgba(186, 1, 100, 1.0);
+      }
+
+      #main_info{
+        height: 150%;
+        width: 100%;
+        margin-top: 0;
+        background-color: #ffffff;
+        clear: both;
+        padding-top: 10px;
+        background-image: url(../media/background.png);
+      }
+
+      #main_info h2{
+        font-family: "Bree Serif";
+        text-align: center;
+        font-size: 1.8em;
+      }
+
+      #main_info p{
+        padding: 50px;
+        text-align: center;
+        font-family: "Bree Serif";
+        font-size: 1.5em;
+      }
+
+      hr{
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0, 0, 0, 0.75), rgba(0,0,0,0));
+        clear: both;
+      }
+
+      .mid{
+        height: 300px;
+        width: 30%;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+        display: inline-block;
+        margin-bottom: 5%;
+      }
+
+      #left_pic{
+        margin-left: 4.5%;
+        background-image: url(../media/mirror_bedroom.jpg);
+        background-position: center left;
+        background-size: cover;
+      }
+
+      #mid_pic{
+        background-image: url(../media/wine_2.jpg);
+        background-position: center bottom;
+        background-size: cover;
+      }
+
+      #right_pic{
+        background-image: url(../media/wine_corks.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+
+      tr, td{
+        border: 1px solid black;
+      }
+
+      table{
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Amatic SC";
+        font-size: 2.7em;
+        margin-bottom: 10%;
+      }
+
+      footer{
+        clear: both;
+        background-color: grey;
+        height: 100%;
+      }
+
+      span{
+        font-weight: bolder;
+      }
+
+      #phone{
+        text-align: center;
+      }
+
+      /* media queries */
+
+            @media only screen and (max-width: 1000px){
+
+              #featured_info{
+                clear: both;
+                width: 100%;
+                border-radius: 0;
+              }
+
+              table{
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+              }
+
+              #featured_item{
+                width: 100%;
+                border-radius: 5px 5px 0 0;
+              }
+
+              #mid_pic{
+                display: none;
+              }
+
+              #left_pic{
+                display: none;
+              }
+
+              #right_pic{
+                width: 100%;
+                background-image: url(../media/wooden_heart.jpeg);
+                height: 350px;
+              }
+            }
+
+            @media only screen and (max-width: 740px){
+
+              #featured_info{
+                font-size: .8em;
+                float: none;
+                width: 100%;
+              }
+
+              #featured_item{
+                display: none;
+              }
+      }

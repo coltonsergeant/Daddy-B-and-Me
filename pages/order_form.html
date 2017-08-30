@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Daddy B &amp; Me - Order</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Bree+Serif" rel="stylesheet" type="text/css">
+    <link href="../css/nav.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript">
+
+    function Validate(){
+
+    var first_name = document.getElementById("firstname").value;
+    var last_name = document.getElementById("lastname").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phonenum").value;
+    var item = document.getElementById("itemlbl").value;
+
+    if(first_name==""){
+      alert("Please enter a valid first name");
+      document.getElementById("firstname").focus();
+      return false;
+    }
+
+    else if(last_name==""){
+      alert("Please enter a valid last name");
+      document.getElementById("lastname").focus();
+      return false;
+    }
+
+    else if(email==""){
+      alert("Please enter a valid email");
+      document.getElementById("email").focus();
+      return false;
+    }
+
+    else if(phone==""){
+      alert("Please enter a valid phone number");
+      document.getElementById("phonenum").focus();
+      return false;
+    }
+
+    else if(item==""){
+      alert("Please select an item");
+      document.getElementById("itemlbl").focus();
+      return false;
+    }
+
+    else{
+      return true;
+    }
+  }
+    </script>
+
+    <style type="text/css">
+
+    form{
+        float: left;
+        margin: 20px 0 10px 10%;
+        padding: 10px;
+        width: 500px;
+        height: 850px;
+        background-image: url(../media/halftone.png);
+        border-style: outset;
+        border-width: 5px;
+        font-family: Georgia;
+      }
+
+    label{
+        float: left;
+        clear: left;
+        margin-top: 10px;
+        margin-right: 15px
+      }
+
+    input{
+        display: block;
+        margin-left: 60px;
+        margin-top: 9px;
+      }
+
+    fieldset select{
+        margin-top: 10px;
+        display: block;
+      }
+
+    fieldset{
+        margin-top: 20px;
+      }
+
+    form p{
+        margin-bottom: 20px;
+      }
+
+      #select_items select{
+        display: block;
+        margin: 2px 5px 5px 120px;
+        border: 1px solid black;
+      }
+
+      #select_items label{
+        margin: 0px;
+      }
+
+      #submit{
+        margin-left: 32%;
+      }
+
+      #buttons input{
+        display: inline;
+        margin-top: 10%;
+      }
+
+      #buttons{
+        margin-top: 20px;
+      }
+
+      .quantity{
+        margin-top: -25px;
+        margin-left: 275px;
+        width: 35px;
+      }
+
+      textarea{
+        margin-top: 8px;
+        margin-left: 0px;
+        display: block;
+      }
+
+      form h6{
+        font-size: 20px;
+        margin: 20px 0px 10px 0px;
+      }
+
+      body{
+        background-image: url(../media/ivy.jpeg);
+        background-size: cover;
+        background-position: center left;
+        margin:0;
+      }
+
+      #explore{
+        float: right;
+        height: 400px;
+        width: 40%;
+        margin: 2% 4% 0 0;
+        background-position: center bottom;
+        background-size: cover;
+        background-image: url(../media/explore.jpg);
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+      }
+
+      #explore p{
+        text-align: center;
+        font-family: "Bree Serif";
+        font-size: 2.5em;
+        color: #ffffff;
+        text-shadow: 2px 2px 3px #000000;
+      }
+
+      footer{
+        clear: both;
+        background-color: grey;
+      }
+
+      #shop_more{
+        width: 6em;
+        border: 1px solid #010011;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgba(186, 1, 100, 0.7);
+        color: #ffffff;
+        text-align: center;
+        font-family: "Bree Serif";
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #shop_more a:visited{
+        color: #ffffff;
+      }
+
+      #shop_more:hover{
+        background-color: rgba(186, 1, 100, 1.0);
+      }
+
+      h3{
+        text-align: center;
+        font-family: "Amatic SC";
+        color: #ffffff;
+        font-size: 7em;
+        margin:0;
+        text-shadow: 2px 2px 3px #000000;
+      }
+
+      #email_form{
+        height: 300px;
+        float: right;
+        margin: 2% 4% 0 0;
+        width: 38%;
+      }
+
+      #email_form textarea{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #email_form h4, #email_form input{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      #email2{
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+/*media query*/
+      @media only screen and (max-width: 1000px){
+
+          form{
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            float: none;
+            width: 60%;
+          }
+
+          #explore{
+            margin-left: auto;
+            margin-right: auto;
+            float: none;
+            width: 60%;
+            margin-top: 5px;
+          }
+
+          #shop_more{
+            width: 8em;
+          }
+
+          #email_form{
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+          }
+        }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html"><img src="../media/DaddyBandMe.jpg" id="logo" alt="Daddy B and Me logo" ></a>
+      <ul>
+        <li><a href="order_form.html">Order</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h3>Request an Item</h3>
+      <form action="http://www.formbuddy.com/cgi-bin/form.pl" method="post" onsubmit="return Validate()">
+        <input type="hidden" name="username" value="csergeant001">
+        <input type="hidden" name="reqd" value="0">
+        <input type="hidden" name="url" value="http://studentweb.monroecc.edu/students/csergeant001/FA_CIS201185/project/pages/order_form.html">
+        <input type="hidden" name="formsubject" value="Daddy B and Me Order">
+        <label for="firstname">First Name:</label>
+          <input type="text" name="firstname" id="firstname">
+        <label for="lastname">Last Name:</label>
+          <input type="text" name="lastname" id="lastname">
+        <label for="phonenum">Phone Number:</label>
+            <input type="tel" name="phonenum" id="phonenum">
+        <label for="email">Email Address:</label>
+            <input type="email" name="email" id="email">
+        <fieldset>
+          <legend>Address (Optional)</legend>
+          <label for="addr1">Address Line 1:</label>
+            <input type="text" name="addr1" id="addr1">
+          <label for="addr2">Address Line 2:</label>
+            <input type="text" name="addr2" id="addr2">
+          <label for="city">City:</label>
+              <input type="text" name="city" id="city">
+          <label for="state">State:</label>
+            <select name="state" id="state">
+              <option value="">Select One</option>
+              <option value="AL">Alabama</option>
+	            <option value="AK">Alaska</option>
+	            <option value="AZ">Arizona</option>
+	            <option value="AR">Arkansas</option>
+	            <option value="CA">California</option>
+	            <option value="CO">Colorado</option>
+	            <option value="CT">Connecticut</option>
+	            <option value="DE">Delaware</option>
+	            <option value="DC">District Of Columbia</option>
+	            <option value="FL">Florida</option>
+	            <option value="GA">Georgia</option>
+	            <option value="HI">Hawaii</option>
+	            <option value="ID">Idaho</option>
+            	<option value="IL">Illinois</option>
+            	<option value="IN">Indiana</option>
+            	<option value="IA">Iowa</option>
+            	<option value="KS">Kansas</option>
+            	<option value="KY">Kentucky</option>
+            	<option value="LA">Louisiana</option>
+            	<option value="ME">Maine</option>
+            	<option value="MD">Maryland</option>
+            	<option value="MA">Massachusetts</option>
+            	<option value="MI">Michigan</option>
+            	<option value="MN">Minnesota</option>
+            	<option value="MS">Mississippi</option>
+            	<option value="MO">Missouri</option>
+            	<option value="MT">Montana</option>
+            	<option value="NE">Nebraska</option>
+            	<option value="NV">Nevada</option>
+            	<option value="NH">New Hampshire</option>
+            	<option value="NJ">New Jersey</option>
+            	<option value="NM">New Mexico</option>
+            	<option value="NY">New York</option>
+            	<option value="NC">North Carolina</option>
+            	<option value="ND">North Dakota</option>
+            	<option value="OH">Ohio</option>
+            	<option value="OK">Oklahoma</option>
+            	<option value="OR">Oregon</option>
+            	<option value="PA">Pennsylvania</option>
+            	<option value="RI">Rhode Island</option>
+            	<option value="SC">South Carolina</option>
+            	<option value="SD">South Dakota</option>
+            	<option value="TN">Tennessee</option>
+            	<option value="TX">Texas</option>
+            	<option value="UT">Utah</option>
+            	<option value="VT">Vermont</option>
+            	<option value="VA">Virginia</option>
+            	<option value="WA">Washington</option>
+            	<option value="WV">West Virginia</option>
+            	<option value="WI">Wisconsin</option>
+            	<option value="WY">Wyoming</option>
+              <option value="AS">American Samoa</option>
+              <option value="GU">Guam</option>
+              <option value="MP">Northern Mariana Islands</option>
+              <option value="PR">Puerto Rico</option>
+              <option value="UM">United States Minor Outlying Islands</option>
+              <option value="VI">Virgin Islands</option>
+              <option value="AA">Armed Forces Americas</option>
+              <option value="AP">Armed Forces Pacific</option>
+              <option value="AE">Armed Forces Others</option>
+            </select>
+          <label for="zip">Zip Code:</label>
+            <input type="text" name="zip" id="zip" maxlength="9" size="9">
+        </fieldset>
+        <h6>Select one or more items below:</h6>
+        <div id="select_items">
+              <label for="item1" id="itemlbl">Select Item Type</label>
+                <select name="item1" id="item1">
+                  <option value="">Select One</option>
+                  <option value="Mirror">Mirror</option>
+                  <option value="Clock">Clock</option>
+                  <option value="Recipe Holder">Recipe Holder</option>
+                  <option value="Holiday">Holiday Decor</option>
+                  <option value="Misc">Miscellaneous Decor</option>
+                </select>
+
+                <input name="item1_quantity" type="number" required="required" value="1" class="quantity" min="1" max="999" >
+
+
+                <label for="item2" id="itemlbl2">Select Item Type</label>
+                  <select name="item2" id="item2">
+                    <option value="">Select One</option>
+                    <option value="Mirror">Mirror</option>
+                    <option value="Clock">Clock</option>
+                    <option value="Recipe Holder">Recipe Holder</option>
+                    <option value="Holiday">Holiday Decor</option>
+                    <option value="Misc">Miscellaneous Decor</option>
+                  </select>
+
+                  <input name="item2_quantity" type="number" class="quantity" min="1" max="999">
+
+                  <label for="item3" id="itemlbl3">Select Item Type</label>
+                    <select name="item3" id="item3">
+                      <option value="">Select One</option>
+                      <option value="Mirror">Mirror</option>
+                      <option value="Clock">Clock</option>
+                      <option value="Recipe Holder">Recipe Holder</option>
+                      <option value="Holiday">Holiday Decor</option>
+                      <option value="Misc">Miscellaneous Decor</option>
+                    </select>
+
+                  <input name="item3_quantity" type="number" class="quantity" min="1" max="999">
+
+                  <label for="item4" id="itemlbl4">Select Item Type</label>
+                    <select name="item4" id="item4">
+                      <option value="">Select One</option>
+                      <option value="Mirror">Mirror</option>
+                      <option value="Clock">Clock</option>
+                      <option value="Recipe Holder">Recipe Holder</option>
+                      <option value="Holiday">Holiday Decor</option>
+                      <option value="Misc">Miscellaneous Decor</option>
+                    </select>
+
+                  <input name="item4_quantity" type="number" class="quantity" min="1" max="999">
+
+                  <label for="item5" id="itemlbl5">Select Item Type</label>
+                    <select name="item5" id="item5">
+                      <option value="">Select One</option>
+                      <option value="Mirror">Mirror</option>
+                      <option value="Clock">Clock</option>
+                      <option value="Recipe Holder">Recipe Holder</option>
+                      <option value="Holiday">Holiday Decor</option>
+                      <option value="Misc">Miscellaneous Decor</option>
+                    </select>
+
+                  <input name="item5_quantity" type="number" class="quantity" min="1" max="999">
+
+                  <textarea rows="10" cols="50" id="custom_req" placeholder="Enter Custom Request Here..."></textarea>
+          </div>
+          <label for="desired_date">Desired Date:</label>
+            <input type="date" id="desired_date">
+        <div id="buttons">
+          <input name="submit" type="submit" id="submit">
+          <input name="reset" type="reset" id="reset">
+        </div>
+      </form>
+
+      <div id="explore">
+        <p>Never Stop Exploring</p>
+        <a href="gallery.html"><div id="shop_more">Shop More</div></a>
+      </div>
+
+      <form action="http://www.formbuddy.com/cgi-bin/form.pl" method="post" id="email_form">
+        <input type="hidden" name="username" value="csergeant001">
+        <input type="hidden" name="reqd" value="0">
+        <input type="hidden" name="url" value="http://studentweb.monroecc.edu/students/csergeant001/FA_CIS201185/project/pages/order_form.html">
+        <input type="hidden" name="formsubject" value="Daddy B and Me Email">
+        <h4>Questions? Send us an Email!</h4>
+        <input type="text" id="email2" placeholder="Email Address" size="52">
+        <textarea rows="10" cols="50" id="email_msg" placeholder="Write message here..."></textarea>
+        <input name="submit" type="submit" id="submit2">
+      </form>
+
+    </main>
+  </body>
+</html>
